@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Event Manager';
+  title = 'EVENT MANAGER';
   status = 'No events at the moment!'
 }
