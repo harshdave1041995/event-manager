@@ -1,0 +1,18 @@
+.header {
+    text-align:left;
+    margin-bottom: 10px;
+    background-color: #2968bb;
+}
+
+.event-list {
+    margin: 0 10px;
+}
+
+h1 {
+    padding: 10px;
+    color: azure;
+}
+
+.body {
+    color: rgb(65, 71, 71);
+}
