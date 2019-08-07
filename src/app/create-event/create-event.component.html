@@ -1,0 +1,110 @@
+
+    <!-- <div class="form-group">
+        <label for="title">Title</label>
+        <input required ngModel name="title" #title="ngModel" (change)="save(title)" id="title" type="text" class="form-control">
+        <div class="alert alert-danger" *ngIf="title.touched && !title.valid">Required!</div>
+    </div>
+    <div class="form-group">
+        <label for="date">Date</label>
+        <input type="datetime-local" id="date" class="form-control">
+    </div-->
+    <!-- <mat-form-field class="form" [floatLabel]="always">
+        <mat-label>Title</mat-label>
+        <input matInput required placeholder="Title">
+         -->
+<mat-card class="card">
+    <div class="example-form form">
+        <mat-form-field class="example-full-width">
+            <input ngModel name="title" #title="ngModel" required matInput placeholder="Title">
+            <mat-error *ngIf="title.invalid && title.errors.required">
+                Title is required!
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input ngModel name="startdate" #startdate="ngModel" required [min]="minDate" [max]="maxDate" matInput [matDatepicker]="startpicker" placeholder="Start date">
+            <mat-datepicker-toggle matSuffix [for]="startpicker"></mat-datepicker-toggle>
+            <mat-datepicker #startpicker></mat-datepicker>
+            <mat-error *ngIf="startdate.invalid && startdate.errors.required">
+                Start Date is required!
+            </mat-error>
+
+        </mat-form-field>
+
+        <div *ngIf="!show_time.checked" class="addtime">
+            <mat-label>Start Time :</mat-label>
+            <input ngModel name="startingtime" #starttime="ngModel" required matInput [ngxTimepicker]="starttime">
+            <ngx-material-timepicker #starttime></ngx-material-timepicker>
+            <!-- <mat-error *ngIf="startingtime.invalid && startingtime.errors.required">
+                Start Time is required!
+            </mat-error> -->
+        </div>
+
+        <mat-form-field class="example-full-width">
+            <input ngModel name="enddate" #enddate="ngModel" required [min]="minDate" [max]="maxDate" matInput [matDatepicker]="endpicker" placeholder="End date">
+            <mat-datepicker-toggle matSuffix [for]="endpicker"></mat-datepicker-toggle>
+            <mat-datepicker #endpicker></mat-datepicker>
+            <mat-error *ngIf="enddate.invalid && enddate.errors.required">
+                End Date is required!
+            </mat-error>
+        </mat-form-field>
+
+        <div *ngIf="!show_time.checked" class="addtime">
+            <mat-label>End Time :</mat-label>
+            <input ngModel name="endingtime" #endingtime="ngModel" required matInput [ngxTimepicker]="endtime">
+            <ngx-material-timepicker #endtime></ngx-material-timepicker>
+            <!-- <mat-error *ngIf="endingtime.invalid && endingtime.errors.required">
+                End Time is required!
+            </mat-error> -->
+        </div>
+        
+        <mat-checkbox 
+            class="example-full-width"
+            #show_time
+            [checked]="isChecked"
+            (change)="onchange($event)"
+            >All day
+        </mat-checkbox>
+
+        <div class="eventdetail">
+            <h3>Event Details:</h3>
+        </div>
+
+        <mat-form-field class="example-full-width">
+            <input ngModel name="location" #location="ngModel" required matInput placeholder="Location">
+            <mat-error *ngIf="location.invalid && location.errors.required">
+                Location is required!
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input ngModel name="email" type="email" #email="ngModel" required matInput placeholder="Email">
+            <mat-error *ngIf="email.invalid && email.errors.required">
+                Email is required!
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <textarea ngModel name="description" #description="ngModel" required matInput placeholder="Description"></textarea>
+            <mat-error *ngIf="description.invalid && description.errors.required">
+                Description is required!
+            </mat-error>
+        </mat-form-field>
+
+        <div class="eventdetail">
+            <h3>Guest Details:</h3>
+        </div>
+
+        <div class="guestlist">
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Guest Name">
+            </mat-form-field>
+            <button class="buttonstyle" mat-button [routerLink]="['/event-list']">ADD</button>
+        </div>
+
+        <div class="buttonaction">
+            <button routerLink="/app-event-list">SAVE</button>
+            <button routerLink="/">CANCEL</button>
+        </div>
+    </div>
+</mat-card>

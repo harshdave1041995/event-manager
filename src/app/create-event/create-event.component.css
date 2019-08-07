@@ -1,0 +1,47 @@
+.form {
+    margin: 0 16px;
+    justify-items: center;
+}
+.addtime {
+    margin: 15px 0;
+}
+
+.eventdetail {
+    margin: 15px 0;
+}
+.guestlist {
+    display: flex;
+}
+.buttonstyle {
+    width: 70px;
+    height: 45px;
+    background-color: #1976d2;
+    text-align: center;
+    margin-left: 10px;
+    padding: 2px;
+    color: white;
+    font-weight: bold;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 80%;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .card {
+      margin: 16px;
+  }
+
+  .buttonaction {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    box-sizing: border-box;
+  }

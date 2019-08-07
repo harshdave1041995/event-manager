@@ -1,11 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="body">
 <div class="header">
-  <h1>
-    {{ title }}
-  </h1>
+  <app-top-bar></app-top-bar>
 </div>
-<h2 class="event-list">
-  {{ status }}
-</h2>
+  <router-outlet></router-outlet>
+  <!-- <app-event-list></app-event-list> -->
 </div>
