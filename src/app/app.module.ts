@@ -22,7 +22,7 @@ const appRoutes: Routes = [
     redirectTo: 'app-event-list',
     pathMatch: 'full'
   },
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: AppComponent }
   ];
 
 @NgModule({
