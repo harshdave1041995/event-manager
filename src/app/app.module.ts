@@ -13,6 +13,7 @@ import { EventListComponent } from './event-list/event-list.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { EventComponent } from './event/event.component';
 import { CreateEventComponent } from './create-event/create-event.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
   { path: 'app-create-event', component: CreateEventComponent },
@@ -20,7 +21,8 @@ const appRoutes: Routes = [
   { path: '',
     redirectTo: 'app-event-list',
     pathMatch: 'full'
-  }
+  },
+  { path: '**', component: PageNotFoundComponent }
   ];
 
 @NgModule({
@@ -29,7 +31,8 @@ const appRoutes: Routes = [
     EventListComponent,
     TopBarComponent,
     EventComponent,
-    CreateEventComponent
+    CreateEventComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
