@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "postinstall": "ng build --aot --prod",
     "deploy": "ng build --prod --base-href https://harshdave1041995.github.io/event-manager/ && angular-cli-ghpages --branch gh-pages"
   },
   "private": true,
@@ -51,5 +52,9 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
+  },
+  "engines": {
+    "node": "~10.16.0",
+    "npm": "~6.9.0"
   }
 }
