@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "node src/app/server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot --prod",
-    "deploy": "ng build --prod --base-href https://harshdave1041995.github.io/event-manager/ && angular-cli-ghpages --branch gh-pages"
+    "postinstall": "ng build --aot --prod"
+    
   },
   "private": true,
   "dependencies": {
